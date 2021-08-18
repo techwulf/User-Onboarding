@@ -18,7 +18,7 @@ export default function UserForm(props) {
       <form onSubmit={onSubmit}>
         <h2>New User</h2>
         <div class="form-item">
-          <p class="error-message"></p>
+          <p class="error-message">{errors.username}</p>
           <label>Username
             <input 
               value={values.username}
@@ -30,7 +30,7 @@ export default function UserForm(props) {
           </label>
         </div>
         <div class="form-item">
-          <p class="error-message"></p>
+          <p class="error-message">{errors.email}</p>
           <label>email
             <input 
               value={values.email}
@@ -42,7 +42,7 @@ export default function UserForm(props) {
           </label>
         </div>
         <div class="form-item">
-          <p class="error-message"></p>
+          <p class="error-message">{errors.password}</p>
           <label>Password
             <input 
               value={values.password}
@@ -54,7 +54,7 @@ export default function UserForm(props) {
           </label>
         </div>
         <div class="form-item">
-          <p class="error-message"></p>
+          <p class="error-message">{errors.tos}</p>
           <label>Do you agree to our TOS?
             <input 
               checked={values.tos}
@@ -64,6 +64,7 @@ export default function UserForm(props) {
             />
           </label>
         </div>
+        <button disabled={disabled}>Submit</button>
       </form>
     </div>
   )

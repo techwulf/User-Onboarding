@@ -16,7 +16,7 @@ const formSchema = yup.object().shape({
     .trim()
     .required('User needs a password')
     .min(15, 'Password must be 15 characters long'),
-  tos: yup.boolean()
+  tos: yup.boolean().oneOf([true], 'Field must be checked')
 })
 
 export default formSchema;
