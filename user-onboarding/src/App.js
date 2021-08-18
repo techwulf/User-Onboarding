@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 
 // Components
 import UserForm from './components/UserForm';
+import schema from './validation/formSchema';
 
 // Initial Values
 const initialFormValues = {
